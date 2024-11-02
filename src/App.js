@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Layout } from 'antd';
+import HeroSection from './components/HeroSection';
+import PhotoGallery from './components/PhotoGallery';
+import VideoMontage from './components/VideoMontage';
+import AppreciationNotes from './components/AppreciationNotes';
+import Timeline from './components/Timeline';
+import Footer from './components/Footer';
+
+const { Header, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      
+      <Content style={{ padding: '2rem 10%' }}>
+        <HeroSection />
+        <PhotoGallery />
+        <VideoMontage />
+        <AppreciationNotes />
+        <Timeline />
+      </Content>
+      <Footer />
+    </Layout>
   );
 }
 
