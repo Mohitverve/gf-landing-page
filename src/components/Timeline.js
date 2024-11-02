@@ -2,9 +2,9 @@ import React from 'react';
 import { Timeline } from 'antd';
 
 const events = [
-  { date: "2023-02-14", description: "First date" },
-  { date: "2023-04-20", description: "Weekend getaway" },
-  { date: "2023-07-30", description: "Celebrated her birthday" },
+  { date: "2024-01-23", description: "Our Beginning" },
+  { date: "2024-03-06", description: "Your Birthday" },
+  { date: "2024-07-23", description: "Celebrated 6 Months of our relationship" },
 ];
 
 function TimelineSection() {

@@ -20,7 +20,10 @@ function App() {
         <AppreciationNotes />
         <Timeline />
       </Content>
+      <div id='appreciation-section'>
       <Footer />
+
+      </div>
     </Layout>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Button } from 'antd';
+import { Link } from 'react-scroll';
 
 const { Title, Paragraph } = Typography;
 
@@ -10,7 +11,15 @@ function HeroSection() {
       <Paragraph style={{ fontSize: '1.1rem', color: 'var(--text-color)' }}>
         Here's a little appreciation for all the wonderful things you do.
       </Paragraph>
-      <Button type="primary" size="large" style={{ padding: '0.5rem 2rem' }}>Scroll to See More</Button>
+      <Link
+        to="appreciation-section" // Target the last section's ID
+        smooth={true}
+        duration={3000} // Adjust duration for a slow scroll
+      >
+        <Button type="primary" size="large" style={{ padding: '0.5rem 2rem' }}>
+          Scroll to See More
+        </Button>
+      </Link>
     </div>
   );
 }

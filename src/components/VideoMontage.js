@@ -1,11 +1,10 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import video1 from '../assets/';
-import video2 from './assets/videos/video2.mp4';
-import video3 from './assets/videos/video3.mp4';
+import video1 from '../assets/videos/v1.mp4';
+import video2 from '../assets/videos/v2.mp4';
+import video3 from '../assets/videos/v3.mp4';
 
-
-const videos = [/* Array of video URLs */];
+const videos = [video1, video2, video3];
 
 function VideoMontage() {
   return (
@@ -14,7 +13,14 @@ function VideoMontage() {
       <Carousel autoplay>
         {videos.map((video, index) => (
           <div key={index} style={{ textAlign: 'center' }}>
-            <video controls src={video} style={{ width: '80%', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }} />
+            <video
+              src={video}
+              style={{ width: '60%', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
+              autoPlay
+              loop
+              muted
+              controls
+            />
           </div>
         ))}
       </Carousel>
