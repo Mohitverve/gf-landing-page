@@ -1,14 +1,15 @@
 import React from 'react';
 import { Typography, Button } from 'antd';
 import { Link } from 'react-scroll';
+import '../styles/HeroSection.css'; // Import the CSS file
 
 const { Title, Paragraph } = Typography;
 
 function HeroSection() {
   return (
-    <div style={{ padding: '4rem', textAlign: 'center', backgroundColor: 'var(--secondary-color)', borderRadius: '10px', marginBottom: '2rem' }}>
-      <Title level={1} style={{ color: 'var(--primary-color)' }}>Welcome, Beautiful!</Title>
-      <Paragraph style={{ fontSize: '1.1rem', color: 'var(--text-color)' }}>
+    <div className="hero-container">
+      <h1 className="hero-title">Welcome, Beautiful!</h1>
+      <Paragraph className="hero-paragraph">
         Here's a little appreciation for all the wonderful things you do.
       </Paragraph>
       <Link
@@ -16,7 +17,7 @@ function HeroSection() {
         smooth={true}
         duration={3000} // Adjust duration for a slow scroll
       >
-        <Button type="primary" size="large" style={{ padding: '0.5rem 2rem' }}>
+        <Button type="primary" size="large" className="hero-button">
           Scroll to See More
         </Button>
       </Link>
